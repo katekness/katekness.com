@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kate Kness | Strategist, Author &amp; Digital Builder</title>
+<meta name="description" content="Kate Kness writes, builds and connects the dots. Strategy through Clarity Forward, the book Girl, Listen, and custom digital tools for leaders.">
+<link rel="canonical" href="https://katekness.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kate Kness">
+<meta property="og:title" content="Kate Kness | Strategist, Author &amp; Digital Builder">
+<meta property="og:description" content="Kate Kness writes, builds and connects the dots. Strategy through Clarity Forward, the book Girl, Listen, and custom digital tools for leaders.">
+<meta property="og:url" content="https://katekness.com/">
+<meta property="og:image" content="https://katekness.com/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f5f3eb">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@1,500&display=swap">
+<script>(function(){var m={"privacy-policy": "privacy/", "privacy-policy-section": "privacy/"},h=location.hash.slice(1);if(m[h])location.replace(m[h]);})();</script><script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Person","@id":"https://katekness.com/#kate","name":"Kate Kness","url":"https://katekness.com","jobTitle":"Strategist, author and digital builder","email":"hello@katekness.com","sameAs":["https://www.instagram.com/katekness","https://www.linkedin.com/in/katekness"],"founder":{"@id":"https://theclarityforward.com/#org"}},
+ {"@type":"Organization","@id":"https://theclarityforward.com/#org","name":"Clarity Forward","url":"https://theclarityforward.com"},
+ {"@type":"Book","name":"Girl, Listen: Your Fascia Needs to Talk to You","author":{"@id":"https://katekness.com/#kate"},"publisher":{"@type":"Organization","name":"Skye Press"},"isbn":"9798995445814","url":"https://hello.katekness.com/book/"}
+]}
+</script>
+<style>
+html,body{margin:0}
+/* Layout: a calm editorial homepage. One wide hero, then three "threads" (strategy, writing, technology) as alternating text and color panels, then about and contact. Stickers appear only where the work is playful. */
+:root{
+  --paper:#f5f3eb; --card:#fffdfa; --navy:#544a4a; --body:#6c6464; --line:#e0ddd5;
+  --gold:#86704c; --goldsoft:#b09c79; --sand:#ece6da; --sky:#6f8ea8; --skywash:#e6edf2;
+  --pink:#ea5f95; --pinkwash:#fde6ee; --sunwash:#fff5d6; --green:#3e7a4e; --greenwash:#e9f2e6;
+  --display:"Gloock",Georgia,"Times New Roman",serif;
+  --accent:"Playfair Display",Georgia,serif;
+  --sans:"Open Sans","Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+body{background:var(--paper);color:var(--navy);font-family:var(--sans);font-size:16px;line-height:1.65}
+*{box-sizing:border-box}
+p{margin:0}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;line-height:1.05;text-wrap:balance}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+.copy{color:var(--body);max-width:58ch;text-wrap:pretty}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgba(251,246,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{font-family:var(--display);font-size:22px;text-decoration:none;letter-spacing:.02em}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:13px;font-weight:600}
+.nav ul a{text-decoration:none;color:var(--body)}
+.nav ul a:hover{color:var(--navy)}
+@media (max-width:640px){.nav ul{gap:14px;font-size:12px}.nav li.hide-sm{display:none}}
+
+/* buttons */
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font:inherit;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  border-radius:44px;padding:14px 22px;border:1.5px solid var(--navy);color:var(--navy);background:transparent;cursor:pointer;transition:transform .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn.solid{background:var(--navy);color:#fff}
+.btn:focus-visible{outline:3px solid #f6c93f;outline-offset:3px}
+
+/* hero */
+.hero .wrap{padding-block:72px 64px;display:grid;gap:22px}
+.hero h1{font-size:clamp(2.6rem,6.4vw,4.8rem);max-width:15ch}
+.hero h1 em{display:block;font-family:var(--accent);font-style:italic;font-weight:500;color:var(--gold);font-size:.62em;line-height:1.2;margin-top:14px}
+.hero .copy{font-size:18px}
+.threads{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.threads a{text-decoration:none;font-size:13px;font-weight:700;border-radius:999px;padding:8px 16px}
+.t1{background:var(--greenwash);color:var(--green)} .t2{background:var(--pinkwash);color:#b23d6b} .t3{background:var(--sunwash);color:var(--gold)}
+
+/* thread sections */
+.section{padding-block:28px}
+.panel{border-radius:28px;padding:44px clamp(22px,4vw,56px);display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;position:relative}
+@media (max-width:820px){.panel{grid-template-columns:minmax(0,1fr)}}
+.panel h2{font-size:clamp(2rem,4vw,2.9rem)}
+.panel .text{display:grid;gap:16px;min-width:0}
+.panel.cf{background:var(--greenwash)} .panel.cf .eyebrow{color:var(--green)}
+.panel.books{background:var(--pinkwash);--navy:#1f2c5f;--body:#4f5577;color:var(--navy)}
+.panel.books .eyebrow,.panel.books .quote b{color:var(--pink)}
+.panel.books .btn{border-color:#1f2c5f;color:#1f2c5f}.panel.books .btn.solid{background:#1f2c5f;color:#fff}
+.panel.tech{background:var(--sunwash)} .panel.tech .eyebrow{color:var(--gold)}
+.quote{background:#fff;border-radius:20px;padding:26px 26px 22px;display:grid;gap:12px;min-width:0}
+.quote p{font-family:var(--accent);font-style:italic;font-weight:500;font-size:20px;line-height:1.45;text-wrap:balance}
+.quote b{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.quote span{display:block;font-size:13px;color:var(--body);margin-top:2px}
+.bookside{display:grid;gap:16px;justify-items:center;min-width:0}
+.bookside img{width:min(260px,70%);filter:drop-shadow(0 10px 16px rgba(31,44,95,.16));transform:rotate(-3deg);transition:transform .3s ease}
+.bookside img:hover{transform:rotate(0) scale(1.03)}
+.bookside .quote{width:100%}
+.tools{display:grid;gap:12px;min-width:0}
+.tool{background:#fff;border-radius:18px;padding:20px 22px;display:grid;gap:4px;text-decoration:none;border:1px solid #f1e5c3;transition:transform .15s ease}
+a.tool:hover{transform:translateY(-2px)}
+.tool strong{font-family:var(--display);font-weight:400;font-size:1.35rem}
+.tool span{font-size:14px;color:var(--body)}
+.tool .go{color:var(--pink);font-weight:700;font-size:13px;margin-top:4px}
+
+/* about + contact */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);padding-block:56px}
+@media (max-width:820px){.split{grid-template-columns:minmax(0,1fr)}}
+.about{display:grid;gap:16px;align-content:start}
+.about h2{font-size:clamp(2rem,4vw,2.8rem)}
+.about .way{font-family:var(--accent);font-style:italic;font-weight:500;font-size:19px;line-height:1.4;color:var(--navy);border-left:2px solid var(--goldsoft);padding-left:16px}
+.contact{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:32px clamp(22px,3vw,36px);display:grid;gap:14px;position:relative}
+.contact h2{font-size:1.9rem;max-width:16ch}
+.contact .phone{position:absolute;right:18px;top:-48px;width:104px;filter:drop-shadow(0 8px 12px rgba(31,44,95,.16));animation:walk 1.4s ease-in-out infinite;transform-origin:50% 90%}
+@keyframes walk{0%,100%{transform:translateY(0) rotate(-3deg)}25%{transform:translateY(-5px) rotate(0)}50%{transform:translateY(0) rotate(3deg)}75%{transform:translateY(-5px) rotate(0)}}
+@media (prefers-reduced-motion:reduce){.contact .phone{animation:none}}
+form{display:grid;gap:12px}
+label{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--body);display:grid;gap:6px}
+input,textarea{font:inherit;font-size:15px;color:var(--navy);background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+input:focus,textarea:focus{outline:2px solid var(--goldsoft);outline-offset:1px;border-color:transparent}
+textarea{min-height:110px;resize:vertical}
+.sent{font-size:14px;color:var(--green);font-weight:600}
+.tally{width:100%;height:560px;border:0;margin:-6px 0 0;display:block}
+.direct{font-size:14px;color:var(--body)}
+.direct b{color:var(--navy)}
+
+
+/* hero with connect-the-dots drawing */
+.hero .wrap{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;column-gap:40px}
+.hero .lead{display:grid;gap:22px;min-width:0}
+.hero .tag{font-family:var(--accent);font-style:italic;font-weight:500;font-size:22px;color:var(--navy)}
+.dots{width:100%;max-width:440px;justify-self:center;overflow:visible}
+.dots .thread{fill:none;stroke:var(--goldsoft);stroke-width:3;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.4s .3s ease-out forwards}
+.dots .strand{fill:none;stroke:#d9cdb6;stroke-width:1.5;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.8s .6s ease-out forwards}
+.dots circle{transform-box:fill-box;transform-origin:center;animation:pop .5s cubic-bezier(.2,1.6,.4,1) both}
+.dots text{font-family:var(--display);font-size:26px;fill:var(--navy)}
+.dots .sm{font-family:var(--sans);font-size:12px;fill:var(--body);letter-spacing:.04em}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.dots .thread,.dots .strand{animation:none;stroke-dashoffset:0}.dots circle{animation:none}}
+@media (max-width:820px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.dots{max-width:340px}}
+
+/* see it, decide it, build it */
+.flow{background:var(--sand);border-radius:28px;padding:48px clamp(22px,4vw,56px);display:grid;gap:28px}
+.flow .head{display:grid;gap:14px;max-width:62ch}
+.flow .head .eyebrow{color:var(--gold)}
+.flow h2{font-size:clamp(2.1rem,4.4vw,3.1rem)}
+.steps{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.steps svg{position:absolute;inset:50% 0 auto 0;width:100%;height:120px;transform:translateY(-50%);pointer-events:none;overflow:visible}
+.steps svg path{fill:none;stroke:var(--goldsoft);stroke-width:3;stroke-linecap:round;vector-effect:non-scaling-stroke;opacity:.55}
+.steps .vthread{display:none}
+.step{position:relative;background:#fff;border-radius:22px;padding:24px 22px 22px;display:grid;gap:8px;align-content:start;text-decoration:none;border:1px solid var(--line);transition:transform .15s ease}
+a.step:hover{transform:translateY(-3px)}
+.step .num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:14px;color:#fff}
+.s1 .num{background:var(--goldsoft)}.s2 .num{background:var(--navy)}.s3 .num{background:var(--sky)}
+.step h3{font-size:1.65rem}
+.step .what{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--body)}
+.step p{font-size:14px;color:var(--body);line-height:1.6}
+.step .go{color:var(--gold);font-weight:700;font-size:13px;margin-top:4px}
+@media (max-width:820px){.steps{grid-template-columns:minmax(0,1fr)}.steps .hthread{display:none}.steps .vthread{display:block;inset:0 auto 0 34px;width:40px;height:100%;transform:none}}
+.flow .quote{background:transparent;padding:0;max-width:60ch}
+.flow .quote p{font-size:19px}
+
+/* photos */
+.portrait{margin:0;justify-self:end;width:min(100%,420px);aspect-ratio:4/5;border-radius:240px 240px 28px 28px;overflow:hidden;box-shadow:0 18px 40px rgba(84,74,74,.14)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
+@media (max-width:820px){.portrait{justify-self:center;width:min(100%,340px)}}
+.band{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding-block:8px 36px;text-align:center}
+.band-line{position:absolute;left:0;top:-4px;width:100%;height:60px;overflow:visible;pointer-events:none}
+.band-line path{fill:none;stroke-linecap:round;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1}
+.band-line .thread{stroke:var(--goldsoft);stroke-width:2.5;animation:draw 2.4s .3s ease-out forwards}
+.band-line .strand{stroke:#d9cdb6;stroke-width:1.2;animation:draw 2.8s .6s ease-out forwards}
+@media (prefers-reduced-motion:reduce){.band-line path{animation:none;stroke-dashoffset:0}}
+.node{position:relative;display:grid;justify-items:center;gap:2px;text-decoration:none;padding-top:0}
+.node .dot{width:32px;height:32px;border-radius:50%;margin:10px 0 10px;box-shadow:0 0 0 6px var(--paper);transition:transform .2s ease}
+.node:hover .dot{transform:scale(1.15)}
+.n1 .dot{background:var(--goldsoft)}.n2 .dot{background:var(--pink)}.n3 .dot{background:var(--sky)}
+.node strong{font-family:var(--display);font-weight:400;font-size:clamp(1.2rem,2.4vw,1.6rem);line-height:1.1}
+.node span:last-child{font-size:12px;color:var(--body)}
+.flow-top{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);gap:clamp(20px,4vw,48px);align-items:center}
+.flow-top .cafe{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:22px}
+@media (max-width:820px){.flow-top{grid-template-columns:minmax(0,1fr)}.flow-top .cafe{aspect-ratio:16/10;max-height:260px}}
+.example{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(20px,4vw,44px);align-items:center;background:#fff;border-radius:24px;padding:clamp(16px,2.5vw,24px);border:1px solid var(--line)}
+.example img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px}
+.example .ex-text{display:grid;gap:12px;justify-items:start;min-width:0}
+.example h3{font-size:1.9rem}
+@media (max-width:820px){.example{grid-template-columns:minmax(0,1fr)}.example img{aspect-ratio:16/11}}
+.bookpic{position:relative;width:100%;max-width:400px}
+.bookpic .bookphoto{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:22px;filter:none;transform:none}
+.bookpic .bookstk{position:absolute;left:-18px;bottom:-22px;width:132px;filter:drop-shadow(0 8px 12px rgba(31,44,95,.18));transform:rotate(-6deg)}
+.bookside .bookpic img:hover{transform:none}
+.bookside .bookpic .bookstk:hover{transform:rotate(0) scale(1.06)}
+.aboutpic{width:min(100%,320px);aspect-ratio:4/5;object-fit:cover;border-radius:24px;margin-bottom:8px}
+
+.rotq{display:grid}
+.rotq .kq{grid-area:1/1;display:grid;gap:12px;align-content:center;opacity:0;transition:opacity .6s ease;pointer-events:none}
+.rotq .kq.on{opacity:1;pointer-events:auto}
+.qdots{grid-area:2/1;display:flex;gap:6px;margin-top:14px}
+.qdots button{width:8px;height:8px;border-radius:50%;border:0;padding:0;background:#f3c3d4;cursor:pointer}
+.qdots button[aria-current="true"]{background:var(--pink)}
+
+.trot{display:grid}
+.trot .tq{grid-area:1/1;align-self:center;display:grid;gap:12px;opacity:0;transition:opacity .7s ease;pointer-events:none}
+.trot .tq.on{opacity:1;pointer-events:auto}
+.tctl{display:flex;align-items:center;gap:12px;margin-top:20px}
+.tctl>button{background:none;border:1px solid var(--line);width:36px;height:36px;border-radius:50%;font-size:18px;line-height:1;color:var(--ink);cursor:pointer}
+.tctl>button:hover{border-color:var(--goldsoft)}
+.tdots{display:flex;gap:7px;flex-wrap:wrap}
+.tdots button{width:8px;height:8px;border-radius:50%;border:0;padding:0;background:#d6ccbd;cursor:pointer}
+.tdots button[aria-current="true"]{background:var(--gold)}
+
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:28px;display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;font-size:13px;color:var(--body)}
+footer nav{display:flex;flex-wrap:wrap;gap:18px}
+footer a{text-decoration:none;font-weight:600;color:var(--navy)}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Kate Kness</a>
+    <nav aria-label="Main"><ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#books">Books</a></li>
+      <li class="hide-sm"><a href="#about">About</a></li>
+      <li><a href="#connect">Contact</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="lead">
+        <div class="eyebrow">Strategist · Author · Builder</div>
+        <h1>You can tell something isn’t quite connecting.<em>You just can’t see the pattern&nbsp;yet.</em></h1>
+        <p class="copy">I make sense of complicated things, through business strategy, books, and digital tools built for real&nbsp;people.</p>
+        <p class="tag">I write, build &amp; connect the&nbsp;dots.</p>
+        <div class="btns"><a class="btn solid" href="#work">See how I work</a><a class="btn" href="#connect">Say hi</a></div>
+      </div>
+      <figure class="portrait"><img src="img/portrait.webp" alt="Kate Kness smiling at her desk with her laptop in a sunlit home office" fetchpriority="high"></figure>
+    </div>
+  </section>
+  <section class="wrap band" aria-label="How my work connects">
+    <svg class="band-line" viewBox="0 0 1000 60" preserveAspectRatio="none" aria-hidden="true">
+      <path class="strand" pathLength="1" d="M0 34 C 80 8, 120 12, 166 30 S 330 56, 500 30 S 760 4, 833 30 S 960 52, 1000 26"/>
+      <path class="thread" pathLength="1" d="M0 30 C 80 5, 120 5, 166 30 S 330 55, 500 30 S 760 5, 833 30 S 960 55, 1000 30"/>
+    </svg>
+    <a class="node n1" href="#work"><span class="dot"></span><strong>Strategy</strong><span>Clarity Forward</span></a>
+    <a class="node n2" href="#books"><span class="dot"></span><strong>Stories</strong><span>Girl, Listen</span></a>
+    <a class="node n3" href="#build"><span class="dot"></span><strong>Tools</strong><span>Custom apps</span></a>
+  </section>
+
+
+  <div class="wrap section" id="work">
+    <div class="flow">
+      <div class="flow-top">
+        <div class="head">
+        <div class="eyebrow">Strategy + custom solutions</div>
+        <h2>See it. Decide it. Build&nbsp;it.</h2>
+        <p class="copy">Your team asks you the same questions every week. Vacation still means checking email. And somehow, the important decisions keep coming back to you. Most of the time the fix isn’t more effort. It’s seeing the pattern, choosing what matters, and sometimes building the tool that holds it all&nbsp;together.</p>
+      </div>
+        <img class="cafe" src="img/cafe.webp" alt="Laptop, iced coffee and a handwritten notebook on a café table">
+      </div>
+      <div class="steps">
+        <svg class="hthread" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50 C 120 0, 230 100, 333 50 S 560 0, 666 50 S 900 100, 1000 50"/></svg>
+        <svg class="vthread" viewBox="0 0 40 1000" preserveAspectRatio="none" aria-hidden="true"><path d="M20 0 C 0 120, 40 230, 20 333 S 0 560, 20 666 S 40 900, 20 1000"/></svg>
+        <a class="step s1" href="https://snapshot.theclarityforward.com/?mode=full&amp;ref=website&amp;event=website" target="_blank" rel="noopener">
+          <span class="num">1</span><span class="what">See it</span><h3>Clarity Snapshot</h3>
+          <p>A free, three-minute look at where friction is hiding and what still depends on&nbsp;you.</p><span class="go">Take the Snapshot →</span></a>
+        <a class="step s2" href="https://theclarityforward.com/" target="_blank" rel="noopener">
+          <span class="num">2</span><span class="what">Decide it</span><h3>Clarity Forward</h3>
+          <p>Decision Sessions, Health Checks and fractional COO support that sort what we find into Keep, Fix, Focus, Delegate and&nbsp;Stop.</p><span class="go">Explore Clarity Forward →</span></a>
+        <a class="step s3" href="#connect">
+          <span class="num">3</span><span class="what">Build it</span><h3>Custom tools</h3>
+          <p>When the fix is a tool, I build it. Like Clarity Connect, which guides people to the right programs, people and&nbsp;resources.</p><span class="go">Ask about a custom build →</span></a>
+      </div>
+      <div class="example" id="build">
+        <img src="img/tablet.webp" alt="A tablet on a wooden table showing Clarity Connect, a guide that helps visitors find their next step">
+        <div class="ex-text">
+          <div class="eyebrow">A recent build</div>
+          <h3>Clarity Connect</h3>
+          <p class="copy">A friendly guide that helps visitors find the right people, programs and next steps, right from a tablet in the lobby or a QR code on their phone. Strategy first, then a tool that keeps it&nbsp;working.</p>
+          <a class="btn" href="#connect">Ask about a custom build</a>
+        </div>
+      </div>
+      <div class="quote" data-rotate>
+        <div class="trot">
+        <div class="tq on"><p>“You really took the vision we had and brought it to life in ways that exceeded what we initially imagined.”</p><div><b>Annabelle</b><span>African Bible Colleges</span></div></div>
+        <div class="tq"><p>“Kate is an entrepreneur’s best friend!”</p><div><b>Heather Ferrari</b><span>Founder &amp; President · The Women 360</span></div></div>
+        <div class="tq"><p>“Kate drew out the common thread, turning it into something clear, cohesive, and beautiful.”</p><div><b>Tania Hilton, MDiv</b><span>Founder · Anchored Biblical Counseling</span></div></div>
+        <div class="tq"><p>“Whenever a problem arose, she handled it efficiently. She worked hard to keep the project moving forward, and the end result went above and beyond what we were expecting.”</p><div><b>Carrie Kearney</b><span>Business Development Director · Live Love</span></div></div>
+        <div class="tq"><p>“Kate asked such thoughtful questions and really listened, not just to what I was saying, but to what I was trying to communicate underneath it all.”</p><div><b>Tania Hilton, MDiv</b><span>Founder · Anchored Biblical Counseling</span></div></div>
+        <div class="tq"><p>“She will work with them to bring about clarity in their messaging and consistency in the marketing.”</p><div><b>Heather Ferrari</b><span>Founder &amp; President · The Women 360</span></div></div>
+        <div class="tq"><p>“I really appreciate the time, creativity, and care you put into it. It was such a pleasure working with you throughout the process.”</p><div><b>Trey Cox</b><span>Director of Family Ministries · Christ Greenfield</span></div></div>
+        <div class="tq"><p>“You brought such a thoughtful perspective to the project and were always willing to problem-solve and find ways to make the vision work.”</p><div><b>Annabelle</b><span>African Bible Colleges</span></div></div>
+        <div class="tq"><p>“Communication with her was easy and consistent throughout the project.”</p><div><b>Carrie Kearney</b><span>Business Development Director · Live Love</span></div></div>
+        <div class="tq"><p>“I felt heard and understood throughout the whole process, and never felt rushed.”</p><div><b>Tania Hilton, MDiv</b><span>Founder · Anchored Biblical Counseling</span></div></div>
+        </div>
+        <div class="tctl"><button type="button" class="tprev" aria-label="Previous testimonial">‹</button><div class="tdots"></div><button type="button" class="tnext" aria-label="Next testimonial">›</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap section" id="books">
+    <div class="panel books">
+      <div class="text">
+        <div class="eyebrow">Author &amp; storyteller</div>
+        <h2>Girl, Listen</h2>
+        <p class="copy">I write for people finding their way through hard seasons, reconnecting with themselves, and taking one honest next step.</p>
+        <p class="copy"><b>Fun fact:</b> fascia is literally your connective tissue. Of course the dot-connector wrote a book about&nbsp;it.</p>
+        <p class="copy">My first book, <i>Girl, Listen: Your Fascia Needs to Talk to You</i>, explores the relationship between the body, emotions, and lived experience, told in fascia’s own (slightly sassy)&nbsp;voice.</p>
+        <div class="btns"><a class="btn solid" href="https://hello.katekness.com/book/" target="_blank" rel="noopener">About the book</a><a class="btn" href="https://www.amazon.com/dp/B0GV4F3B1Y" target="_blank" rel="noopener">Amazon</a><a class="btn" href="https://www.barnesandnoble.com/w/girl-listen-kate-kness/1150100454?ean=9798995445814" target="_blank" rel="noopener">Barnes &amp; Noble</a></div>
+      </div>
+      <div class="bookside">
+        <div class="bookpic"><img class="bookphoto" src="img/book.webp" alt="The pink paperback of Girl, Listen resting on a notebook on a round wooden side table"><img class="bookstk" src="img/notnow.webp" alt="Sticker: Not Now, I’m Being a Body"></div>
+        <div class="quote rotq" id="rotq" aria-label="What readers are saying">
+          <div class="kq on"><p>“I felt my body relaxing within the first few pages, which is not normally what happens when I pick up self-help.”</p><div><b>Mindi Leatham</b><span>Artist</span></div></div>
+          <div class="kq"><p>“A must read for girls of all ages.”</p><div><b>Beverly Parker</b><span>Amazon reviewer</span></div></div>
+          <div class="kq"><p>“It feels like you’re conversing with a girlfriend. This book doesn’t have pressure behind it.”</p><div><b>Trish R.</b><span>Reader</span></div></div>
+          <div class="kq"><p>“It aligns with how I think about the body and nervous system, but in a creative and accessible way.”</p><div><b>Natalie Elliott, PhD</b><span>Scientist</span></div></div>
+          <div class="kq"><p>“It felt like an invitation to slow down, listen to my body, and respond with more awareness.”</p><div><b>Christine</b><span>Pastor</span></div></div>
+          <div class="kq"><p>“It was presented in a creative and gentle way… more like a conversation, which felt relaxed and inviting.”</p><div><b>Alicia Suarez</b><span>Teen Recovery Counselor</span></div></div>
+          <div class="kq"><p>“It’s very calming, I feel seen, and it has a very good flow to it.”</p><div><b>Trish R.</b><span>Reader</span></div></div>
+          <div class="kq"><p>“I felt like I learned something new in a way that was engaging and easy to understand.”</p><div><b>Cara Havens</b><span>Therapist</span></div></div>
+          <div class="kq"><p>“Listening to our body can change the way we feel physically and emotionally.”</p><div><b>RoxanneR</b><span>Amazon reviewer</span></div></div>
+          <div class="qdots" id="qdots"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="split">
+      <section class="about" id="about">
+        <img class="aboutpic" src="img/yellow.webp" alt="Kate Kness smiling against a soft green wall in a yellow knit top">
+        <div class="eyebrow">About</div>
+        <h2>Hi, I’m Kate.</h2>
+        <p class="copy">Complex challenges often show up first as friction. I’m interested in understanding what’s creating it, and what would help things work better.</p>
+        <p class="copy">I bring a systems perspective shaped by technology leadership, brand and experience development, authorship, and digital product creation.</p>
+        <p class="way">See the pattern. Clarify what matters. Build the next&nbsp;step.</p>
+      </section>
+
+      <section class="contact" id="connect">
+        <div class="eyebrow">Connect</div>
+        <h2>Have a new idea, a messy challenge, or a project we could tackle&nbsp;together?</h2>
+        <p class="copy">I’d love to hear about it.</p>
+        <iframe class="tally" src="https://tally.so/embed/1WWzLO?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;source=website" title="Contact form" loading="lazy"></iframe>
+        <p class="direct">Or write to me at <a href="mailto:hello@katekness.com"><b>hello@katekness.com</b></a></p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Kate Kness</span>
+    <nav aria-label="Elsewhere">
+      <a href="https://www.instagram.com/katekness" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/in/katekness" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://theclarityforward.com/" target="_blank" rel="noopener">Clarity Forward</a>
+      <a href="privacy/">Privacy</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.querySelectorAll("[data-rotate]").forEach(function(root){
+    var qs=root.querySelectorAll(".tq"), dots=root.querySelector(".tdots"), prev=root.querySelector(".tprev"), next=root.querySelector(".tnext");
+    if(!qs.length) return;
+    var i=0,timer=null,still=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches,btns=[];
+    qs.forEach(function(q,n){var d=document.createElement("button");d.type="button";d.setAttribute("aria-label","Show testimonial "+(n+1));d.addEventListener("click",function(){show(n);go();});dots.appendChild(d);btns.push(d);});
+    function show(n){i=(n+qs.length)%qs.length;qs.forEach(function(q,k){q.classList.toggle("on",k===i)});btns.forEach(function(b,k){b.setAttribute("aria-current",k===i?"true":"false")});}
+    function go(){if(still)return;clearInterval(timer);timer=setInterval(function(){show(i+1)},6500);}
+    if(prev) prev.addEventListener("click",function(){show(i-1);go();});
+    if(next) next.addEventListener("click",function(){show(i+1);go();});
+    root.addEventListener("mouseenter",function(){clearInterval(timer)}); root.addEventListener("mouseleave",go);
+    show(0);go();
+  });
+})();
+
+(function(){
+  var qs=document.querySelectorAll("#rotq .kq"), dots=document.getElementById("qdots"); if(!qs.length||!dots) return;
+  var i=0,timer=null,still=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches,btns=[];
+  qs.forEach(function(q,n){var d=document.createElement("button");d.type="button";d.setAttribute("aria-label","Show review "+(n+1));d.addEventListener("click",function(){show(n);go();});dots.appendChild(d);btns.push(d);});
+  function show(n){i=n;qs.forEach(function(q,k){q.classList.toggle("on",k===n)});btns.forEach(function(b,k){b.setAttribute("aria-current",k===n?"true":"false")});}
+  function go(){if(still)return;clearInterval(timer);timer=setInterval(function(){show((i+1)%qs.length)},6000);}
+  show(0);go();
+})();
+</script>
+</body>
+</html>
