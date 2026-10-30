@@ -140,6 +140,17 @@ a.place:hover{transform:translateY(-2px)}
 
 footer .wrap{padding-block:28px;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;font-size:13px;color:var(--body)}
 footer a{color:var(--navy);font-weight:600;text-decoration:none}
+
+.merch{padding-block:0 clamp(56px,6vw,80px)}
+.merch .head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.merch h2{font-size:clamp(1.9rem,3.4vw,2.6rem);margin-top:10px}
+.merch .row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.merch .p{display:block;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;text-decoration:none;transition:transform .15s ease}
+.merch .p:hover{transform:translateY(-3px)}
+.merch .p img{aspect-ratio:1;object-fit:cover}
+.merch .p span{display:block;padding:14px 16px 16px;font-family:var(--display);font-size:1.15rem;line-height:1.2}
+.merch .p small{display:block;font-family:var(--sans);font-size:13px;color:var(--body);margin-top:4px}
+@media (max-width:640px){.merch .row{grid-template-columns:repeat(2,minmax(0,1fr))}.merch .row .p:nth-child(3){display:none}}
 </style>
 </head>
 <body>
@@ -150,6 +161,7 @@ footer a{color:var(--navy);font-weight:600;text-decoration:none}
       <li class="hide-sm"><a href="#reviews">Reviews</a></li>
       <li><a href="#buy">Get the book</a></li>
       <li><a href="#list">Join the list</a></li>
+      <li class="hide-sm"><a href="/shop/">Shop</a></li>
     </ul></nav>
   </div>
 </header>
@@ -238,6 +250,21 @@ footer a{color:var(--navy);font-weight:600;text-decoration:none}
           <a class="way" href="https://www.barnesandnoble.com/w/girl-listen-kate-kness/1150100454?ean=9798995445814#reviews" target="_blank" rel="noopener"><div><strong>Review on Barnes &amp; Noble</strong><span>Scroll to Customer Reviews and tap Write a Review</span></div><i>&rarr;</i></a>
           <a class="way me" href="https://tally.so/r/rDD4Nl?source=bookpage" target="_blank" rel="noopener"><div><strong>Send it straight to me</strong><span>Got it from Grove Coffee or at an event? I'd love to read it</span></div><i>&rarr;</i></a>
         </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="merch" id="shop">
+    <div class="wrap">
+      <div class="head">
+        <div><div class="eyebrow">Take it with you</div><h2>Your body has opinions. Wear&nbsp;them.</h2></div>
+        <a class="btn" href="/shop/?ref=bookpage">See the whole shop</a>
+      </div>
+      <div class="row">
+        <a class="p" href="https://kate-kness-shop.fourthwall.com/products/the-body-has-entered-the-chat-tote?ref=bookpage" target="_blank" rel="noopener"><img src="https://imgproxy.fourthwall.dev/Cz5XUDiwH9jRfQGkVWrIy65joyFwYTSLNQG03IDM2o8/w:1920/sm:1/enc/QviUTCE9LbogyfpF/Vu09vcqKiDc33bxI/84ZbFgwasJy1oMYY/VQR7CGiSjZfdCOYk/PejE723jVsSoJJ2o/fHDhqACOoWXuUQvM/WZ6wTixBurCP8Hn9/WkjFJu_x2ZR99x0w/ltdViocmI_2CuuTT/f74jOArOVFdFkhjl/cL5ARH06BYLUcvgC/rfkjrK3cX7NU8oFH/XNa2kaX5ODvraBdk/IoR-KTmgOLsoJOyV/nOdkfEDJrnY.jpg" alt="The Body Has Entered the Chat tote" loading="lazy" width="800" height="800"><span>The Body Has Entered the Chat Tote<small>$24</small></span></a>
+        <a class="p" href="https://kate-kness-shop.fourthwall.com/products/not-now-im-being-a-body-tote?ref=bookpage" target="_blank" rel="noopener"><img src="https://imgproxy.fourthwall.dev/RIJh3fVKV19jQhBNtQwZzq7ewsRGHqNmu0dQ1qCOYw4/w:1920/sm:1/enc/_ymwGNQG0qzCt3hj/R1IDX9CFhmZrx3sV/COCTB8iq3D6YO39g/a-8Z1DStcXnIYTV3/vliRzbwpNyzCtJHi/LhR1nAjriaZEwsek/OvUCiR-682l8hMW9/DSbKpP1Nk_HyEYSA/NRdD1RfxOCgpql3k/MR9NybUTz3rUydet/v8fKJAhuO5qH41yg/u6hwmwJ-wZX59Vx7/w--I5zTGevBQu-WG/YOPctTjejkJI8fbv/_b-DSMEZMtU.jpg" alt="Not Now, I'm Being a Body tote in pink" loading="lazy" width="800" height="800"><span>Not Now, I’m Being a Body Tote<small>$24</small></span></a>
+        <a class="p" href="https://kate-kness-shop.fourthwall.com/products/the-body-has-opinions-bandana-pink?ref=bookpage" target="_blank" rel="noopener"><img src="https://imgproxy.fourthwall.dev/ERY1qCSRWoj22frcK24TvdMp8_M8QuiFbua1ZwE4ojA/w:1920/sm:1/enc/3nQ4HuuN4XQR-3Lv/xmVW_O9GovQjzBM5/PhPtwOyzNSbaOfF0/xaceZpocb4WbTOYk/LxLVl2iy-ahmrhhO/UIBeEVJjYaBUnj96/IPGV9HDTIkxfJta4/6wP1nhWS3t5exNAf/XhJ5LNQYW01fOkJu/cbZFxDVyZ9qTB3UZ/vgDy-N3FhplsNguc/V9h2nql7_hMAij7a/WJOHUYZt8Gp5K11l/w42Xsj7YBrBtHvS6/xhCWb4Q3N3U.webp" alt="The Body Has Opinions bandana in pink" loading="lazy" width="800" height="800"><span>The Body Has Opinions Bandana<small>$24 · pink, blue or cream</small></span></a>
       </div>
     </div>
   </section>
