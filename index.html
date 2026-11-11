@@ -190,7 +190,7 @@ a.step:hover{transform:translateY(-3px)}
 .portrait{margin:0;justify-self:end;width:min(100%,420px);aspect-ratio:4/5;border-radius:240px 240px 28px 28px;overflow:hidden;box-shadow:0 18px 40px rgba(84,74,74,.14)}
 .portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
 @media (max-width:820px){.portrait{justify-self:center;width:min(100%,340px)}}
-.band{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding-block:8px 36px;text-align:center}
+.band{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding-block:8px 36px;text-align:center}
 .band-line{position:absolute;left:0;top:-4px;width:100%;height:60px;overflow:visible;pointer-events:none}
 .band-line path{fill:none;stroke-linecap:round;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1}
 .band-line .thread{stroke:var(--goldsoft);stroke-width:2.5;animation:draw 2.4s .3s ease-out forwards}
@@ -199,7 +199,12 @@ a.step:hover{transform:translateY(-3px)}
 .node{position:relative;display:grid;justify-items:center;gap:2px;text-decoration:none;padding-top:0}
 .node .dot{width:32px;height:32px;border-radius:50%;margin:10px 0 10px;box-shadow:0 0 0 6px var(--paper);transition:transform .2s ease}
 .node:hover .dot{transform:scale(1.15)}
-.n1 .dot{background:var(--goldsoft)}.n2 .dot{background:var(--pink)}.n3 .dot{background:var(--sky)}
+.n1 .dot{background:var(--goldsoft)}.n2 .dot{background:var(--pink)}.n3 .dot{background:var(--green)}.n4 .dot{background:var(--gold)}.n5 .dot{background:var(--sky)}
+@media (max-width:600px){.node strong{font-size:.95rem}.node span:last-child{font-size:10.5px}.node .dot{width:24px;height:24px}}
+.substack{width:100%;height:320px;border:1px solid rgba(0,0,0,.06);border-radius:18px;background:#fff;display:block}
+.topics{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.topics li{display:grid;gap:2px;padding:14px 18px;border-radius:16px;background:rgba(255,255,255,.65)}
+.topics b{font-family:var(--display);font-weight:400;font-size:1.2rem}
 .node strong{font-family:var(--display);font-weight:400;font-size:clamp(1.2rem,2.4vw,1.6rem);line-height:1.1}
 .node span:last-child{font-size:12px;color:var(--body)}
 .flow-top{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);gap:clamp(20px,4vw,48px);align-items:center}
@@ -247,8 +252,9 @@ footer .fam{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}foote
   <div class="wrap">
     <a class="brand" href="#top">Kate Kness</a>
     <nav aria-label="Main"><ul>
-      <li><a href="#work">Work</a></li>
       <li><a href="#books">Books</a></li>
+      <li class="hide-sm"><a href="#writing">Writing</a></li>
+      <li><a href="#work">Work</a></li>
       <li class="hide-sm"><a href="#about">About</a></li>
       <li><a href="#connect">Contact</a></li>
     </ul></nav>
@@ -270,14 +276,63 @@ footer .fam{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}foote
   </section>
   <section class="wrap band" aria-label="How my work connects">
     <svg class="band-line" viewBox="0 0 1000 60" preserveAspectRatio="none" aria-hidden="true">
-      <path class="strand" pathLength="1" d="M0 34 C 80 8, 120 12, 166 30 S 330 56, 500 30 S 760 4, 833 30 S 960 52, 1000 26"/>
-      <path class="thread" pathLength="1" d="M0 30 C 80 5, 120 5, 166 30 S 330 55, 500 30 S 760 5, 833 30 S 960 55, 1000 30"/>
+      <path class="strand" pathLength="1" d="M0 34 C 40 10, 70 12, 100 30 S 200 56, 300 30 S 400 6, 500 30 S 600 56, 700 30 S 800 6, 900 30 S 980 50, 1000 26"/>
+      <path class="thread" pathLength="1" d="M0 30 C 40 5, 70 5, 100 30 S 200 55, 300 30 S 400 5, 500 30 S 600 55, 700 30 S 800 5, 900 30 S 980 55, 1000 30"/>
     </svg>
     <a class="node n1" href="#work"><span class="dot"></span><strong>Strategy</strong><span>Clarity Forward</span></a>
     <a class="node n2" href="#books"><span class="dot"></span><strong>Stories</strong><span>Girl, Listen</span></a>
-    <a class="node n3" href="#build"><span class="dot"></span><strong>Tools</strong><span>Custom apps</span></a>
+    <a class="node n3" href="#writing"><span class="dot"></span><strong>Writing</strong><span>Substack</span></a>
+    <a class="node n4" href="#speaking"><span class="dot"></span><strong>Speaking</strong><span>Talks &amp; workshops</span></a>
+    <a class="node n5" href="#build"><span class="dot"></span><strong>Tools</strong><span>Custom apps</span></a>
   </section>
 
+
+  <div class="wrap section" id="books">
+    <div class="panel books">
+      <div class="text">
+        <div class="eyebrow">Author &amp; storyteller</div>
+        <h2>Girl, Listen</h2>
+        <p class="lead">I write for people finding their way through hard seasons, reconnecting with themselves, and taking one honest next&nbsp;step.</p>
+        <p class="copy">My first book, <i>Girl, Listen: Your Fascia Needs to Talk to You</i>, explores the relationship between the body, emotions, and lived experience, told in fascia’s own (slightly sassy)&nbsp;voice.</p>
+        <div class="fact">
+          <svg class="minidots" viewBox="0 0 88 40" aria-hidden="true"><path d="M10 28 C24 6 36 6 44 20 S66 34 78 12" /><circle cx="10" cy="28" r="7" fill="#b09c79"/><circle cx="44" cy="20" r="7" fill="#ea5f95"/><circle cx="78" cy="12" r="7" fill="#6f8ea8"/></svg>
+          <p><b>Fun fact:</b> fascia is literally your connective tissue. Of course the dot&#8209;connector wrote a book about&nbsp;it.</p>
+        </div>
+        <div class="buy">
+          <a class="btn solid" href="/book/">About the book</a>
+          <p class="also">Also on <a href="https://www.amazon.com/dp/B0GV4F3B1Y" target="_blank" rel="noopener">Amazon</a> <span aria-hidden="true">·</span> <a href="https://www.barnesandnoble.com/w/girl-listen-kate-kness/1150100454?ean=9798995445814" target="_blank" rel="noopener">Barnes &amp; Noble</a></p>
+        </div>
+      </div>
+      <div class="bookside">
+        <div class="bookpic"><img class="bookphoto" src="img/book.webp" alt="The pink paperback of Girl, Listen resting on a notebook on a round wooden side table"><img class="bookstk" src="img/notnow.webp" alt="Sticker: Not Now, I’m Being a Body"></div>
+        <div class="quote rotq" id="rotq" aria-label="What readers are saying">
+          <div class="kq on"><p>“I felt my body relaxing within the first few pages, which is not normally what happens when I pick up self-help.”</p><div><b>Mindi Leatham</b><span>Artist</span></div></div>
+          <div class="kq"><p>“A must read for girls of all ages.”</p><div><b>Beverly Parker</b><span>Amazon reviewer</span></div></div>
+          <div class="kq"><p>“It feels like you’re conversing with a girlfriend. This book doesn’t have pressure behind it.”</p><div><b>Trish R.</b><span>Reader</span></div></div>
+          <div class="kq"><p>“It aligns with how I think about the body and nervous system, but in a creative and accessible way.”</p><div><b>Natalie Elliott, PhD</b><span>Scientist</span></div></div>
+          <div class="kq"><p>“It felt like an invitation to slow down, listen to my body, and respond with more awareness.”</p><div><b>Christine</b><span>Pastor</span></div></div>
+          <div class="kq"><p>“It was presented in a creative and gentle way… more like a conversation, which felt relaxed and inviting.”</p><div><b>Alicia Suarez</b><span>Teen Recovery Counselor</span></div></div>
+          <div class="kq"><p>“It’s very calming, I feel seen, and it has a very good flow to it.”</p><div><b>Trish R.</b><span>Reader</span></div></div>
+          <div class="kq"><p>“I felt like I learned something new in a way that was engaging and easy to understand.”</p><div><b>Cara Havens</b><span>Therapist</span></div></div>
+          <div class="kq"><p>“Listening to our body can change the way we feel physically and emotionally.”</p><div><b>RoxanneR</b><span>Amazon reviewer</span></div></div>
+          <div class="qdots" id="qdots"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap section" id="writing">
+    <div class="panel cf">
+      <div class="text">
+        <div class="eyebrow">Writing</div>
+        <h2>Now That You Mention&nbsp;It</h2>
+        <p class="lead">Essays about the quiet negotiations we make every day, and how to stop abandoning ourselves in the middle of&nbsp;them.</p>
+        <p class="copy">New pieces land in your inbox. Free to read, with a paid tier for the deeper&nbsp;ones.</p>
+        <div class="buy"><a class="btn solid" href="https://katekness.substack.com/" target="_blank" rel="noopener">Read on Substack</a></div>
+      </div>
+      <iframe class="substack" src="https://katekness.substack.com/embed" title="Subscribe to Now That You Mention It" loading="lazy"></iframe>
+    </div>
+  </div>
 
   <div class="wrap section" id="work">
     <div class="flow">
@@ -338,37 +393,19 @@ footer .fam{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}foote
     </div>
   </div>
 
-  <div class="wrap section" id="books">
-    <div class="panel books">
+  <div class="wrap section" id="speaking">
+    <div class="panel tech">
       <div class="text">
-        <div class="eyebrow">Author &amp; storyteller</div>
-        <h2>Girl, Listen</h2>
-        <p class="lead">I write for people finding their way through hard seasons, reconnecting with themselves, and taking one honest next&nbsp;step.</p>
-        <p class="copy">My first book, <i>Girl, Listen: Your Fascia Needs to Talk to You</i>, explores the relationship between the body, emotions, and lived experience, told in fascia’s own (slightly sassy)&nbsp;voice.</p>
-        <div class="fact">
-          <svg class="minidots" viewBox="0 0 88 40" aria-hidden="true"><path d="M10 28 C24 6 36 6 44 20 S66 34 78 12" /><circle cx="10" cy="28" r="7" fill="#b09c79"/><circle cx="44" cy="20" r="7" fill="#ea5f95"/><circle cx="78" cy="12" r="7" fill="#6f8ea8"/></svg>
-          <p><b>Fun fact:</b> fascia is literally your connective tissue. Of course the dot&#8209;connector wrote a book about&nbsp;it.</p>
-        </div>
-        <div class="buy">
-          <a class="btn solid" href="/book/">About the book</a>
-          <p class="also">Also on <a href="https://www.amazon.com/dp/B0GV4F3B1Y" target="_blank" rel="noopener">Amazon</a> <span aria-hidden="true">·</span> <a href="https://www.barnesandnoble.com/w/girl-listen-kate-kness/1150100454?ean=9798995445814" target="_blank" rel="noopener">Barnes &amp; Noble</a></p>
-        </div>
+        <div class="eyebrow">Speaking &amp; workshops</div>
+        <h2>Bring it into the&nbsp;room</h2>
+        <p class="lead">I speak with business groups, nonprofit teams and women’s networks about the things that quietly hold us&nbsp;back.</p>
+        <div class="buy"><a class="btn solid" href="#connect">Invite me to speak</a></div>
       </div>
-      <div class="bookside">
-        <div class="bookpic"><img class="bookphoto" src="img/book.webp" alt="The pink paperback of Girl, Listen resting on a notebook on a round wooden side table"><img class="bookstk" src="img/notnow.webp" alt="Sticker: Not Now, I’m Being a Body"></div>
-        <div class="quote rotq" id="rotq" aria-label="What readers are saying">
-          <div class="kq on"><p>“I felt my body relaxing within the first few pages, which is not normally what happens when I pick up self-help.”</p><div><b>Mindi Leatham</b><span>Artist</span></div></div>
-          <div class="kq"><p>“A must read for girls of all ages.”</p><div><b>Beverly Parker</b><span>Amazon reviewer</span></div></div>
-          <div class="kq"><p>“It feels like you’re conversing with a girlfriend. This book doesn’t have pressure behind it.”</p><div><b>Trish R.</b><span>Reader</span></div></div>
-          <div class="kq"><p>“It aligns with how I think about the body and nervous system, but in a creative and accessible way.”</p><div><b>Natalie Elliott, PhD</b><span>Scientist</span></div></div>
-          <div class="kq"><p>“It felt like an invitation to slow down, listen to my body, and respond with more awareness.”</p><div><b>Christine</b><span>Pastor</span></div></div>
-          <div class="kq"><p>“It was presented in a creative and gentle way… more like a conversation, which felt relaxed and inviting.”</p><div><b>Alicia Suarez</b><span>Teen Recovery Counselor</span></div></div>
-          <div class="kq"><p>“It’s very calming, I feel seen, and it has a very good flow to it.”</p><div><b>Trish R.</b><span>Reader</span></div></div>
-          <div class="kq"><p>“I felt like I learned something new in a way that was engaging and easy to understand.”</p><div><b>Cara Havens</b><span>Therapist</span></div></div>
-          <div class="kq"><p>“Listening to our body can change the way we feel physically and emotionally.”</p><div><b>RoxanneR</b><span>Amazon reviewer</span></div></div>
-          <div class="qdots" id="qdots"></div>
-        </div>
-      </div>
+      <ul class="topics">
+        <li><b>When it all still runs through you</b><span>Owner dependence, and how to build a business that can breathe without&nbsp;you.</span></li>
+        <li><b>Your body has opinions</b><span>A friendly introduction to fascia, bracing, and listening&nbsp;in.</span></li>
+        <li><b>Do what scares you</b><span>Starting before you feel qualified, and what your nervous system has to do with&nbsp;it.</span></li>
+      </ul>
     </div>
   </div>
 
