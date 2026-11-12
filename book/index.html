@@ -60,11 +60,17 @@ a{color:inherit}
 .hero .pic .stk{position:absolute;left:-28px;bottom:-30px;width:clamp(120px,14vw,170px);transform:rotate(-6deg)}
 @media (max-width:860px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.hero .pic{order:-1;width:min(100%,380px)}}
 
-/* fair */
-.fair{background:var(--pinkwash)}
-.fair .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;padding-block:28px}
-.fair .when{font-family:var(--display);font-size:clamp(1.4rem,2.6vw,1.9rem);line-height:1.15}
-.fair .copy{font-size:15px}
+/* ask your bookstore */
+.ask{background:var(--pinkwash)}
+.ask .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;padding-block:28px}
+.ask .when{font-family:var(--display);font-size:clamp(1.4rem,2.6vw,1.9rem);line-height:1.15;margin-top:4px}
+.ask .copy{font-size:15px;margin-top:4px}
+.isbns{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:grid;gap:1px;text-align:left;font:inherit;cursor:pointer;background:#fff;border:1.5px solid #f4cfdc;border-radius:16px;padding:10px 16px;color:var(--navy);transition:transform .15s ease}
+.chip:hover{transform:translateY(-2px)}
+.chip:focus-visible{outline:3px solid #f6c93f;outline-offset:3px}
+.chip small{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--pinkdeep)}
+.chip span{font-variant-numeric:tabular-nums;font-weight:600;font-size:15px}
 
 /* reviews */
 .reviews{padding-block:clamp(56px,8vw,96px);text-align:center}
@@ -109,6 +115,13 @@ a.place:hover{transform:translateY(-2px)}
 .place strong i{font-style:normal;color:var(--pink)}
 .place span{font-size:13px;color:var(--body);line-height:1.55}
 .isbn{font-variant-numeric:tabular-nums;white-space:nowrap}
+.fmt{display:flex;gap:4px;background:#f6efe4;border-radius:40px;padding:4px}
+.fmt button{flex:1;border:0;background:transparent;font:inherit;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:10px 6px;border-radius:40px;color:var(--body);cursor:pointer}
+.fmt button[aria-selected="true"]{background:var(--navy);color:#fff}
+.fmt button:focus-visible{outline:3px solid #f6c93f;outline-offset:2px}
+.where{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;font-size:13px;color:var(--body)}
+.where select{font:inherit;font-size:13px;font-weight:600;color:var(--navy);background:#fff;border:1px solid var(--line);border-radius:10px;padding:5px 8px}
+.where a{color:var(--navy);font-weight:700}
 .news{background:var(--sunwash)}
 .news .eyebrow{color:var(--gold)}
 .news .stk{transform:rotate(-6deg)}
@@ -184,14 +197,17 @@ footer a{color:var(--navy);font-weight:600;text-decoration:none}
     </div>
   </section>
 
-  <section class="fair" id="fair">
+  <section class="ask" id="ask">
     <div class="wrap">
       <div>
-        <div class="eyebrow">Come say hi in person</div>
-        <p class="when">The Women 360 Book Fair · Tuesday, Nov&nbsp;10, 10&nbsp;AM to&nbsp;noon</p>
-        <p class="copy">Kiln Gilbert, Theater Room. Signed copies, free stickers, and a little giveaway at my&nbsp;table.</p>
+        <div class="eyebrow">Can’t find it on a shelf?</div>
+        <p class="when">Ask for&nbsp;it.</p>
+        <p class="copy">Any bookstore or library can order Girl, Listen with one number. A reader asking is how a book ends up on the&nbsp;shelf.</p>
       </div>
-      <a class="btn solid" href="https://www.eventbrite.com/e/the-women-360-coffee-book-fair-tickets-1998275849859" target="_blank" rel="noopener">Tickets and details</a>
+      <div class="isbns">
+        <button class="chip" type="button" data-copy="9798995445814"><small>Paperback ISBN · tap to copy</small><span>979-8-9954458-1-4</span></button>
+        <button class="chip" type="button" data-copy="9798995445821"><small>Hardcover ISBN · tap to copy</small><span>979-8-9954458-2-1</span></button>
+      </div>
     </div>
   </section>
 
@@ -219,12 +235,21 @@ footer a{color:var(--navy);font-weight:600;text-decoration:none}
         <img class="stk" src="../stickers/hydrate.webp" alt="Sticker: Hydrate Your Fascia">
         <div class="eyebrow">Where to find it</div>
         <h2>Get your copy</h2>
-        <div class="places">
+        <div class="fmt" role="tablist" aria-label="Format" hidden>
+          <button type="button" role="tab" data-fmt="pb" aria-selected="true">Paperback</button>
+          <button type="button" role="tab" data-fmt="hc" aria-selected="false">Hardcover</button>
+          <button type="button" role="tab" data-fmt="kindle" aria-selected="false">Kindle</button>
+        </div>
+        <div class="places" id="places" aria-live="polite">
           <a class="place" href="https://www.amazon.com/dp/B0GV4F3B1Y" target="_blank" rel="noopener"><strong>Amazon <i>→</i></strong><span>Paperback and Kindle</span></a>
           <a class="place" href="https://www.barnesandnoble.com/w/girl-listen-kate-kness/1150100454?ean=9798995445814" target="_blank" rel="noopener"><strong>Barnes &amp; Noble <i>→</i></strong><span>Paperback and hardcover</span></a>
+          <a class="place" href="https://bookshop.org/p/books/girl-listen-your-fascia-needs-to-talk-to-you-kate-kness/8299a2dc966bd13d?ean=9798995445814" target="_blank" rel="noopener"><strong>Bookshop.org <i>→</i></strong><span>Supports independent bookstores</span></a>
           <a class="place" href="https://www.thegroveaz.org/grove-coffee" target="_blank" rel="noopener"><strong>Grove Coffee, Chandler <i>→</i></strong><span>Signed copies on the shelf. 2777 S Gilbert Rd, Chandler,&nbsp;AZ</span></a>
-          <div class="place"><strong>Your local bookstore</strong><span>Ask them to order it with the ISBN:<br>Paperback <span class="isbn">979-8-9954458-1-4</span><br>Hardcover <span class="isbn">979-8-9954458-2-1</span></span></div>
         </div>
+        <p class="where" id="where" hidden><label for="country">Shopping from</label><select id="country">
+          <option value="us">the US</option><option value="ca">Canada</option><option value="uk">the UK &amp; Ireland</option><option value="au">Australia</option><option value="de">Germany &amp; Europe</option>
+        </select></p>
+        <p class="small">Somewhere else, or love your local shop? <a href="#ask">Ask them to order it</a>.</p>
       </div>
       <div class="panel news" id="list">
         <img class="stk" src="../stickers/phone.webp" alt="Sticker: The Body Has Entered the Chat">
@@ -303,8 +328,57 @@ footer a{color:var(--navy);font-weight:600;text-decoration:none}
   function go(){if(still)return;clearInterval(timer);timer=setInterval(function(){show((i+1)%qs.length)},6000);}
   show(0);go();
 })();
-// Hide the book fair band once the fair is over (Nov 10, 2026, noon in Arizona)
-(function(){ if (Date.now() > Date.UTC(2026,10,10,19,0)) { var f=document.getElementById("fair"); if (f) f.hidden=true; } })();
+// Get your copy: format tabs + country picker. Without JS the static US list above still works.
+(function(){
+  var PB="9798995445814", HC="9798995445821", KINDLE="B0GV4F3B1Y";
+  var BN="https://www.barnesandnoble.com/w/girl-listen-kate-kness/1150100454?ean=";
+  var BS="https://bookshop.org/p/books/girl-listen-your-fascia-needs-to-talk-to-you-kate-kness/8299a2dc966bd13d?ean=";
+  var GROVE={n:"Grove Coffee, Chandler",d:"Signed copies on the shelf. 2777 S Gilbert Rd, Chandler, AZ",u:"https://www.thegroveaz.org/grove-coffee"};
+  var AMZ={us:"amazon.com",ca:"amazon.ca",uk:"amazon.co.uk",au:"amazon.com.au",de:"amazon.de"};
+  function amzPrint(c,isbn){return "https://www."+AMZ[c]+"/s?k="+isbn;}
+  function amzKindle(c){return c==="us"?"https://www.amazon.com/dp/"+KINDLE:"https://www."+AMZ[c]+"/s?k=Girl+Listen+Kate+Kness&i=digital-text";}
+  function stores(c,f){
+    if(f==="kindle") return [{n:"Amazon Kindle",d:"The ebook, on "+AMZ[c],u:amzKindle(c)}];
+    var isbn=f==="hc"?HC:PB, list=[{n:"Amazon",d:(f==="hc"?"Hardcover":"Paperback")+" on "+AMZ[c],u:amzPrint(c,isbn)}];
+    if(c==="us"){
+      list.push({n:"Barnes & Noble",d:"Order online",u:BN+isbn});
+      list.push({n:"Bookshop.org",d:"Supports independent bookstores",u:BS+isbn});
+      list.push(GROVE);
+    }
+    if(c==="uk") list.push({n:"Blackwell’s",d:"UK bookseller",u:"https://blackwells.co.uk/bookshop/product/"+isbn});
+    if(c==="au") list.push({n:"Booktopia",d:"Australian bookseller",u:"https://www.booktopia.com.au/girl-listen-kate-kness/book/"+isbn+".html"});
+    return list;
+  }
+  var tabs=document.querySelector(".fmt"), where=document.getElementById("where"), sel=document.getElementById("country"), box=document.getElementById("places");
+  if(!tabs||!sel||!box) return;
+  function guess(){
+    try{var s=localStorage.getItem("kk-country"); if(s&&AMZ[s]) return s;}catch(e){}
+    var langs=(navigator.languages||[navigator.language||""]).join(",").toLowerCase();
+    if(/-ca\b/.test(langs)) return "ca";
+    if(/-(gb|ie)\b/.test(langs)) return "uk";
+    if(/-(au|nz)\b/.test(langs)) return "au";
+    if(/^(de|fr|es|it|nl|at)\b|-(de|at|ch|fr|es|it|nl|be)\b/.test(langs)) return "de";
+    return "us";
+  }
+  var country=guess(), fmt="pb";
+  function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;");}
+  function render(){
+    box.innerHTML=stores(country,fmt).map(function(s){return '<a class="place" href="'+s.u+'" target="_blank" rel="noopener"><strong>'+esc(s.n)+' <i>→</i></strong><span>'+esc(s.d)+'</span></a>';}).join("");
+    tabs.querySelectorAll("button").forEach(function(b){b.setAttribute("aria-selected",b.dataset.fmt===fmt?"true":"false");});
+  }
+  tabs.addEventListener("click",function(e){var b=e.target.closest("button[data-fmt]"); if(b){fmt=b.dataset.fmt; render();}});
+  sel.value=country;
+  sel.addEventListener("change",function(){country=sel.value; try{localStorage.setItem("kk-country",country);}catch(e){} render();});
+  tabs.hidden=false; where.hidden=false; render();
+})();
+// Tap an ISBN to copy it
+document.querySelectorAll(".chip[data-copy]").forEach(function(b){
+  b.addEventListener("click",function(){
+    var lbl=b.querySelector("small"), orig=lbl.textContent, kind=orig.split(" ISBN")[0];
+    function done(ok){lbl.textContent=ok?kind+" ISBN · copied":kind+" ISBN"; setTimeout(function(){lbl.textContent=orig;},1800);}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(b.dataset.copy).then(function(){done(true)},function(){done(false)});} else done(false);
+  });
+});
 </script>
 </body>
 </html>
