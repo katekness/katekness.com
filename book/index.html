@@ -154,6 +154,13 @@ a.place:hover{transform:translateY(-2px)}
 footer .wrap{padding-block:28px;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;font-size:13px;color:var(--body)}
 footer a{color:var(--navy);font-weight:600;text-decoration:none}
 
+.kit{padding-block:0 clamp(48px,6vw,72px)}
+.kit .box{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(22px,4vw,48px);align-items:center;background:var(--pinkwash);border-radius:28px;padding:clamp(22px,4vw,44px)}
+.kit img{width:100%;height:auto;border-radius:20px;display:block;mix-blend-mode:multiply}
+.kit h2{font-size:clamp(1.9rem,3.4vw,2.6rem);margin:10px 0 12px}
+.kit p{margin:0 0 18px;line-height:1.6}
+.kit .price{font-weight:700;margin-bottom:18px}
+@media (max-width:720px){.kit .box{grid-template-columns:1fr}}
 .merch{padding-block:0 clamp(56px,6vw,80px)}
 .merch .head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:22px}
 .merch h2{font-size:clamp(1.9rem,3.4vw,2.6rem);margin-top:10px}
@@ -279,6 +286,21 @@ footer a{color:var(--navy);font-weight:600;text-decoration:none}
     </div>
   </section>
 
+
+  <section class="kit" id="kit">
+    <div class="wrap">
+      <div class="box">
+        <img src="/img/kit-cards.webp" alt="The Unclench Your Jaw card, front and back" width="900" height="775" loading="lazy">
+        <div>
+          <div class="eyebrow">New · The Body Check-In Kit</div>
+          <h2>Your body's been calling. Pick&nbsp;up.</h2>
+          <p>Twelve check-in cards and a bonus reset, written in fascia's voice. One for each moment she tends to speak up: before the laptop, mid-meeting, eating lunch over the counter like a raccoon. Pull one, flip it, notice one thing.</p>
+          <p class="price">$12 · Instant download for your phone, plus printable cards</p>
+          <a class="btn solid" href="https://kate-kness-shop.fourthwall.com/products/girl-listen-the-body-check-in-kit?ref=bookpage" target="_blank" rel="noopener">Get the kit</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="merch" id="shop">
     <div class="wrap">
