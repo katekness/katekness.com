@@ -63,6 +63,16 @@ a{color:inherit}
 @media (max-width:860px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.hero .pic{order:-1;width:min(100%,380px)}}
 
 /* ask your bookstore */
+/* holiday gift band (hides itself after Dec 25) */
+.gift{background:var(--greenwash)}
+.gift .wrap{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;padding-block:clamp(32px,5vw,56px)}
+.gift img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px;box-shadow:0 14px 32px rgba(31,44,95,.14)}
+.gift .eyebrow{color:var(--green)}
+.gift h2{font-size:clamp(1.8rem,3.6vw,2.6rem);margin-top:6px}
+.gift .copy{margin-top:12px;max-width:52ch}
+.gift .small{font-size:14px;margin-top:10px;max-width:52ch}
+.gift .btns{margin-top:18px}
+@media (max-width:700px){.gift .wrap{grid-template-columns:minmax(0,1fr)}.gift img{width:min(100%,280px)}}
 .ask{background:var(--pinkwash)}
 .ask .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;padding-block:28px}
 .ask .when{font-family:var(--display);font-size:clamp(1.4rem,2.6vw,1.9rem);line-height:1.15;margin-top:4px}
@@ -208,6 +218,19 @@ footer a{color:var(--navy);font-weight:600;text-decoration:none}
     </div>
   </section>
 
+  <section class="gift" id="gift" data-until="2026-12-26">
+    <div class="wrap">
+      <img src="stocking.webp" alt="The pink paperback of Girl, Listen tucked into a red knit stocking hanging from a mantel" loading="lazy">
+      <div>
+        <div class="eyebrow">Stocking stuffer season</div>
+        <h2>The stocking stuffer with&nbsp;opinions.</h2>
+        <p class="copy">For the woman who stretches every morning and still wakes up stiff, or who’d laugh out loud at a book narrated by her own connective tissue. It fits in a stocking, and it never once tells her to fix&nbsp;herself.</p>
+        <p class="small">Paperback and hardcover ship from Amazon, so order early for Christmas. Kindle can be sent as a gift right up to Christmas&nbsp;morning.</p>
+        <div class="btns"><a class="btn solid" href="#buy">Give it as a gift</a></div>
+      </div>
+    </div>
+  </section>
+
   <section class="ask" id="ask">
     <div class="wrap">
       <div>
@@ -346,6 +369,8 @@ footer a{color:var(--navy);font-weight:600;text-decoration:none}
 </footer>
 
 <script>
+// Seasonal sections hide themselves after their date (Arizona time)
+document.querySelectorAll("[data-until]").forEach(function(el){ if (new Date() >= new Date(el.dataset.until+"T00:00:00-07:00")) el.hidden = true; });
 (function(){
   var qs=document.querySelectorAll("#rq .q"), dots=document.getElementById("dots"); if(!qs.length||!dots) return;
   var i=0,timer=null,still=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches,btns=[];

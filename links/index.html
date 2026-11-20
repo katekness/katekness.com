@@ -69,6 +69,10 @@ footer a{color:var(--navy);font-weight:700;text-decoration:none}
   </header>
 
   <p class="label">Girl, Listen</p>
+  <a class="link" id="holiday" data-until="2026-12-26" href="/book/?ref=instagram#gift">
+    <img src="../img/stocking-thumb.webp" alt="" style="border-radius:12px">
+    <div><strong>The stocking stuffer with opinions</strong><span>Gift Girl, Listen this Christmas</span></div><span class="go">→</span>
+  </a>
   <a class="link feature" href="/book/?ref=instagram">
     <img src="../stickers/notnow.webp" alt="">
     <div><strong>Get the book</strong><span>Paperback, hardcover or Kindle. In the US and abroad.</span></div><span class="go">→</span>
@@ -107,6 +111,7 @@ footer a{color:var(--navy);font-weight:700;text-decoration:none}
   <p class="note">Creative who needs a simple website? I recommend <a href="https://launchpadpages.com/?ref=kateness" target="_blank" rel="sponsored noopener">LaunchPad Pages</a>. (Referral link, no extra cost to you.)</p>
   <footer>© 2026 Kate Kness · <a href="/privacy/">Privacy</a></footer>
 </main>
+<script>document.querySelectorAll("[data-until]").forEach(function(el){ if (new Date() >= new Date(el.dataset.until+"T00:00:00-07:00")) el.remove(); });</script>
 <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "c5d701dc8b6d43088110704865e924c1"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
