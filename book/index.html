@@ -28,7 +28,9 @@ html,body{margin:0}
 body{background:var(--paper);color:var(--navy);font-family:var(--sans);font-size:16px;line-height:1.65;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 p{margin:0}
 img{max-width:100%;height:auto;display:block}
-h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;line-height:1.04;text-wrap:balance}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;line-height:1.06;text-wrap:pretty}
+h1{text-wrap:balance}
+p,li,blockquote{text-wrap:pretty}
 a{color:inherit}
 .wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
 .eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--pinkdeep)}
@@ -89,7 +91,9 @@ a{color:inherit}
 .rate{padding-block:clamp(56px,6vw,72px) clamp(48px,6vw,80px)}
 .rate .box{position:relative;background:var(--pinkwash);border-radius:28px;padding:clamp(28px,4vw,48px);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(22px,4vw,48px);align-items:center}
 @media (max-width:860px){.rate .box{grid-template-columns:minmax(0,1fr)}}
-.rate h2{font-size:clamp(1.9rem,3.4vw,2.6rem);max-width:13ch;margin-top:10px}
+.rate h2{font-size:clamp(1.9rem,3.2vw,2.5rem);max-width:none;margin-top:10px}
+.nw{white-space:nowrap}
+@media (min-width:900px){.rate h2 .ln{display:block}}
 .rate .lede{margin-top:12px;color:var(--body);font-size:15.5px;line-height:1.65;max-width:38ch}
 .rate .ways{display:grid;gap:10px}
 .rate .way{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 18px;border-radius:16px;background:#fff;text-decoration:none;color:var(--navy);border:1px solid #f4cfdc;transition:transform .15s ease}
@@ -192,9 +196,9 @@ footer a{color:var(--navy);font-weight:600;text-decoration:none}
       <div class="text">
         <div class="eyebrow">Book one · The Girl, Listen series</div>
         <h1>Girl, Listen</h1>
-        <p class="sub">Your Fascia Needs to Talk to&nbsp;You</p>
-        <p class="copy">A gentle, conversational introduction to fascia, the connective tissue woven through your whole body, told in fascia’s own (slightly sassy) voice. Not a textbook. Not a fix-yourself manual. Just a long-overdue&nbsp;introduction.</p>
-        <p class="lede">“You weren’t missing anything. You were just never&nbsp;introduced.”</p>
+        <p class="sub">Your Fascia Needs to Talk to You</p>
+        <p class="copy">A gentle, conversational introduction to fascia, the connective tissue woven through your whole body, told in fascia’s own (slightly sassy) voice. Not a textbook. Not a fix-yourself manual. Just a long-overdue introduction.</p>
+        <p class="lede">“You weren’t missing anything. You were just never introduced.”</p>
         <div class="btns"><a class="btn solid" href="#buy">Get your copy</a><a class="btn" href="#list">Join the list</a></div>
       </div>
       <div class="pic">
@@ -208,8 +212,8 @@ footer a{color:var(--navy);font-weight:600;text-decoration:none}
     <div class="wrap">
       <div>
         <div class="eyebrow">Can’t find it on a shelf?</div>
-        <p class="when">Ask for&nbsp;it.</p>
-        <p class="copy">Any bookstore or library can order Girl, Listen with one number. A reader asking is how a book ends up on the&nbsp;shelf.</p>
+        <p class="when">Ask for it.</p>
+        <p class="copy">Any bookstore or library can order Girl, Listen with one number. A reader asking is how a book ends up on the shelf.</p>
       </div>
       <div class="isbns">
         <button class="chip" type="button" data-copy="9798995445814"><small>Paperback ISBN · tap to copy</small><span>979-8-9954458-1-4</span></button>
@@ -261,7 +265,7 @@ footer a{color:var(--navy);font-weight:600;text-decoration:none}
       <div class="panel news" id="list">
         <img class="stk" src="../stickers/phone.webp" alt="Sticker: The Body Has Entered the Chat">
         <div class="eyebrow">The Girl, Listen list</div>
-        <h2>Little notes, now and then</h2>
+        <h2>Little notes, <span class="nw">now and then</span></h2>
         <iframe src="https://tally.so/embed/8NNgYY?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;source=bookpage" title="Join the Girl, Listen list"></iframe>
         <p class="small">Form not loading? <a href="https://tally.so/r/8NNgYY?source=bookpage" target="_blank" rel="noopener">Join the list here</a></p>
       </div>
@@ -274,12 +278,12 @@ footer a{color:var(--navy);font-weight:600;text-decoration:none}
         <img class="stk" src="../stickers/opinions.webp" alt="Sticker: My Body Has Opinions">
         <div>
           <div class="eyebrow">Read it already?</div>
-          <h2>Your body has opinions. So do&nbsp;you.</h2>
-          <p class="lede">Reviews are how other women find this book. A few honest sentences, wherever you bought it, mean more than you&nbsp;know.</p>
+          <h2><span class="ln">Loved it?</span> <span class="ln nw">Pass it on.</span></h2>
+          <p class="lede">Reviews are how other women find this book. A few honest sentences, wherever you bought it, mean more than you know.</p>
         </div>
         <div class="ways">
           <a class="way" href="https://www.amazon.com/review/create-review?asin=B0GV4F3B1Y" target="_blank" rel="noopener"><div><strong>Review on Amazon</strong><span>Paperback or Kindle, any star count is a gift</span></div><i>&rarr;</i></a>
-          <a class="way" href="https://www.barnesandnoble.com/w/girl-listen-kate-kness/1150100454?ean=9798995445814#reviews" target="_blank" rel="noopener"><div><strong>Review on Barnes &amp; Noble</strong><span>Scroll to Customer Reviews and tap Write a Review</span></div><i>&rarr;</i></a>
+          <a class="way" href="https://www.barnesandnoble.com/w/girl-listen-kate-kness/1150100454?ean=9798995445814#reviews" target="_blank" rel="noopener"><div><strong>Review on <span class="nw">Barnes &amp; Noble</span></strong><span>Scroll to Customer Reviews and tap Write a Review</span></div><i>&rarr;</i></a>
           <a class="way me" href="https://tally.so/r/rDD4Nl?source=bookpage" target="_blank" rel="noopener"><div><strong>Send it straight to me</strong><span>Got it from Grove Coffee or at an event? I'd love to read it</span></div><i>&rarr;</i></a>
         </div>
       </div>
@@ -293,7 +297,7 @@ footer a{color:var(--navy);font-weight:600;text-decoration:none}
         <img src="/img/kit-cards.webp" alt="The Unclench Your Jaw card, front and back" width="900" height="775" loading="lazy">
         <div>
           <div class="eyebrow">New · The Body Check-In Kit</div>
-          <h2>Your body's been calling. Pick&nbsp;up.</h2>
+          <h2>Little check-ins, <span class="nw">right where you are.</span></h2>
           <p>Twelve check-in cards and a bonus reset, written in fascia's voice. One for each moment she tends to speak up: before the laptop, mid-meeting, eating lunch over the counter like a raccoon. Pull one, flip it, notice one thing.</p>
           <p class="price">$12 · Instant download for your phone, plus printable cards</p>
           <a class="btn solid" href="https://kate-kness-shop.fourthwall.com/products/girl-listen-the-body-check-in-kit?ref=bookpage" target="_blank" rel="noopener">Get the kit</a>
@@ -305,7 +309,7 @@ footer a{color:var(--navy);font-weight:600;text-decoration:none}
   <section class="merch" id="shop">
     <div class="wrap">
       <div class="head">
-        <div><div class="eyebrow">Take it with you</div><h2>Your body has opinions. Wear&nbsp;them.</h2></div>
+        <div><div class="eyebrow">From the shop</div><h2>Take it with you.</h2></div>
         <a class="btn" href="/shop/?ref=bookpage">See the whole shop</a>
       </div>
       <div class="row">
@@ -322,8 +326,8 @@ footer a{color:var(--navy);font-weight:600;text-decoration:none}
       <div class="text">
         <div class="eyebrow">About the author</div>
         <h2>Hi, I’m Kate.</h2>
-        <p class="copy">Kate Kness is a writer based in Arizona who explores the relationship between the body and lived experience. She wrote this book because she wished someone had handed it to her&nbsp;sooner.</p>
-        <p class="copy">Book clubs, events, podcasts and interviews, or just to tell me what your fascia has been saying, I’d love to hear from&nbsp;you.</p>
+        <p class="copy">Kate Kness is a writer based in Arizona who explores the relationship between the body and lived experience. She wrote this book because she wished someone had handed it to her sooner.</p>
+        <p class="copy">Book clubs, events, podcasts and interviews, or just to tell me what your fascia has been saying, I’d love to hear from you.</p>
         <div class="rows">
           <div class="row"><span>Email</span><a href="mailto:hello@katekness.com">hello@katekness.com</a></div>
           <div class="row"><span>Instagram</span><a href="https://www.instagram.com/katekness" target="_blank" rel="noopener">@katekness</a></div>

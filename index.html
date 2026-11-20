@@ -43,7 +43,11 @@ body{background:var(--paper);color:var(--navy);font-family:var(--sans);font-size
 *{box-sizing:border-box}
 p{margin:0}
 img{max-width:100%;height:auto;display:block}
-h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;line-height:1.05;text-wrap:balance}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;line-height:1.08;text-wrap:pretty}
+h1{text-wrap:balance}
+p,li,blockquote{text-wrap:pretty}
+.nw{white-space:nowrap}
+@media (min-width:700px){.ln{display:block}}
 a{color:inherit}
 .wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
 .eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--gold)}
@@ -65,16 +69,22 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   border-radius:44px;padding:14px 22px;border:1.5px solid var(--navy);color:var(--navy);background:transparent;cursor:pointer;transition:transform .15s ease}
 .btn:hover{transform:translateY(-2px)}
 .btn.solid{background:var(--navy);color:#fff}
-.book-line{display:inline-block;width:fit-content;margin:0 0 26px;font-size:15px;color:var(--navy);text-decoration:none;border-bottom:1px solid var(--goldsoft);padding-bottom:3px}
-.book-line span{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-right:6px}
-.book-line em{font-family:var(--accent);font-size:18px}
-.book-line:hover{border-bottom-color:var(--navy)}
 .btn:focus-visible{outline:3px solid #f6c93f;outline-offset:3px}
+
+/* book banner */
+.book-banner{display:block;background:#cc3878;color:#fff;text-decoration:none;font-size:14px}
+.book-banner .wrap{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding-block:10px;text-align:center}
+.book-banner .pill{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:rgba(255,255,255,.18);border-radius:40px;padding:4px 10px}
+.book-banner .t em{font-family:var(--accent);font-size:17px}
+.book-banner .go{font-weight:700;letter-spacing:.02em;border-bottom:1px solid rgba(255,255,255,.6)}
+.book-banner:hover .go{border-bottom-color:#fff}
+.book-banner:focus-visible{outline:3px solid #f6c93f;outline-offset:-3px}
+@media (max-width:560px){.book-banner .sub{display:none}.book-banner .wrap{gap:8px 10px}}
 
 /* hero */
 .hero .wrap{padding-block:72px 64px;display:grid;gap:22px}
-.hero h1{font-size:clamp(2.6rem,6.4vw,4.8rem);max-width:15ch}
-.hero h1 em{display:block;font-family:var(--accent);font-style:italic;font-weight:500;color:var(--gold);font-size:.62em;line-height:1.2;margin-top:14px}
+.hero h1{font-size:clamp(2.3rem,4.6vw,3.6rem);max-width:17ch;letter-spacing:-.01em}
+.hero h1 em{display:block;font-family:var(--accent);font-style:italic;font-weight:500;color:var(--gold);font-size:.5em;line-height:1.3;margin-top:18px;max-width:30ch;text-wrap:pretty}
 .hero .copy{font-size:18px}
 .threads{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
 .threads a{text-decoration:none;font-size:13px;font-weight:700;border-radius:999px;padding:8px 16px}
@@ -92,7 +102,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .panel.books .btn{border-color:#1f2c5f;color:#1f2c5f}.panel.books .btn.solid{background:#1f2c5f;color:#fff}
 .panel.books{grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding-block:52px}
 .panel.books .text{gap:18px}
-.books .lead{font-family:var(--accent);font-style:italic;font-weight:500;font-size:clamp(1.25rem,2vw,1.5rem);line-height:1.4;color:var(--navy);text-wrap:balance}
+.books .lead{font-family:var(--accent);font-style:italic;font-weight:500;font-size:clamp(1.2rem,1.8vw,1.4rem);line-height:1.45;color:var(--navy);text-wrap:pretty}
 .books .fact{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.7);border-radius:20px;padding:16px 20px}
 .books .fact p{font-size:15px;line-height:1.55;color:var(--body)} .books .fact b{color:var(--navy)}
 .minidots{flex:none;width:76px;height:auto;overflow:visible}
@@ -108,7 +118,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @media (max-width:820px){.panel.books{grid-template-columns:minmax(0,1fr);padding-block:40px}.minidots{width:58px}.books .fact{padding:14px 16px;gap:12px}}
 .panel.tech{background:var(--sunwash)} .panel.tech .eyebrow{color:var(--gold)}
 .quote{background:#fff;border-radius:20px;padding:26px 26px 22px;display:grid;gap:12px;min-width:0}
-.quote p{font-family:var(--accent);font-style:italic;font-weight:500;font-size:20px;line-height:1.45;text-wrap:balance}
+.quote p{font-family:var(--accent);font-style:italic;font-weight:500;font-size:20px;line-height:1.45;text-wrap:pretty}
 .quote b{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
 .quote span{display:block;font-size:13px;color:var(--body);margin-top:2px}
 .bookside{display:grid;gap:16px;justify-items:center;min-width:0}
@@ -129,7 +139,7 @@ a.tool:hover{transform:translateY(-2px)}
 .about h2{font-size:clamp(2rem,4vw,2.8rem)}
 .about .way{font-family:var(--accent);font-style:italic;font-weight:500;font-size:19px;line-height:1.4;color:var(--navy);border-left:2px solid var(--goldsoft);padding-left:16px}
 .contact{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:32px clamp(22px,3vw,36px);display:grid;gap:14px;position:relative}
-.contact h2{font-size:1.9rem;max-width:16ch}
+.contact h2{font-size:1.9rem;max-width:22ch}
 .contact .phone{position:absolute;right:18px;top:-48px;width:104px;filter:drop-shadow(0 8px 12px rgba(31,44,95,.16));animation:walk 1.4s ease-in-out infinite;transform-origin:50% 90%}
 @keyframes walk{0%,100%{transform:translateY(0) rotate(-3deg)}25%{transform:translateY(-5px) rotate(0)}50%{transform:translateY(0) rotate(3deg)}75%{transform:translateY(-5px) rotate(0)}}
 @media (prefers-reduced-motion:reduce){.contact .phone{animation:none}}
@@ -249,6 +259,7 @@ footer .fam{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}foote
 </head>
 <body>
 
+<a class="book-banner" href="/book/"><span class="wrap"><span class="pill">New book</span><span class="t"><em>Girl, Listen</em><span class="sub">: Your Fascia Needs to Talk to You</span></span><span class="go">Get your copy &rarr;</span></span></a>
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="#top">Kate Kness</a>
@@ -265,11 +276,10 @@ footer .fam{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}foote
   <section class="hero">
     <div class="wrap">
       <div class="lead">
-        <a class="book-line" href="/book/"><span>New book</span> <em>Girl, Listen: Your Fascia Needs to Talk to You</em> &rarr;</a>
         <div class="eyebrow">Author · Strategist · Builder</div>
-        <h1>You can tell something isn’t quite connecting.<em>You just can’t see the pattern&nbsp;yet.</em></h1>
-        <p class="copy">I make sense of complicated things, through business strategy, books, and digital tools built for real&nbsp;people.</p>
-        <p class="tag">I write, build &amp; connect the&nbsp;dots.</p>
+        <h1>Most of what feels off is a connection problem.<em>In your body, that’s fascia. In your work, it’s everything running through you.</em></h1>
+        <p class="copy">I make sense of complicated things, through business strategy, books, and digital tools built for real people.</p>
+        <p class="tag">I write, build &amp; connect the dots.</p>
         <div class="btns"><a class="btn solid" href="#work">See how I work</a><a class="btn" href="#connect">Say hi</a></div>
       </div>
       <figure class="portrait"><img src="img/portrait.webp" alt="Kate Kness smiling at her desk with her laptop in a sunlit home office" fetchpriority="high"></figure>
@@ -291,11 +301,11 @@ footer .fam{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}foote
       <div class="text">
         <div class="eyebrow">Author &amp; storyteller</div>
         <h2>Girl, Listen</h2>
-        <p class="lead">I write for people finding their way through hard seasons, reconnecting with themselves, and taking one honest next&nbsp;step.</p>
-        <p class="copy">My first book, <i>Girl, Listen: Your Fascia Needs to Talk to You</i>, explores the relationship between the body, emotions, and lived experience, told in fascia’s own (slightly sassy)&nbsp;voice.</p>
+        <p class="lead">I write for people finding their way through hard seasons, reconnecting with themselves, and taking one honest next step.</p>
+        <p class="copy">My first book, <i>Girl, Listen: Your Fascia Needs to Talk to You</i>, explores the relationship between the body, emotions, and lived experience, told in fascia’s own (slightly sassy) voice.</p>
         <div class="fact">
           <svg class="minidots" viewBox="0 0 88 40" aria-hidden="true"><path d="M10 28 C24 6 36 6 44 20 S66 34 78 12" /><circle cx="10" cy="28" r="7" fill="#b09c79"/><circle cx="44" cy="20" r="7" fill="#ea5f95"/><circle cx="78" cy="12" r="7" fill="#6f8ea8"/></svg>
-          <p><b>Fun fact:</b> fascia is literally your connective tissue. Of course the dot&#8209;connector wrote a book about&nbsp;it.</p>
+          <p><b>Fun fact:</b> fascia is literally your connective tissue. Of course the dot&#8209;connector wrote a book about it.</p>
         </div>
         <div class="buy">
           <a class="btn solid" href="/book/">About the book</a>
@@ -324,10 +334,10 @@ footer .fam{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}foote
     <div class="flow">
       <div class="flow-top">
         <div class="head">
-        <p class="bridge" style="font-family:var(--accent);font-style:italic;font-size:clamp(1.1rem,2.2vw,1.35rem);color:var(--navy);margin:0 0 18px">Bodies brace when one part carries too much. So do&nbsp;businesses.</p>
+        <p class="bridge" style="font-family:var(--accent);font-style:italic;font-size:clamp(1.1rem,2.2vw,1.35rem);color:var(--navy);margin:0 0 18px;max-width:46ch;text-wrap:pretty"><span class="ln">Bodies brace when one part carries too much.</span> <span class="ln nw">So do businesses.</span></p>
         <div class="eyebrow">Strategy + custom solutions</div>
-        <h2>See it. Decide it. Build&nbsp;it.</h2>
-        <p class="copy">Your team asks you the same questions every week. Vacation still means checking email. And somehow, the important decisions keep coming back to you. Most of the time the fix isn’t more effort. It’s seeing the pattern, choosing what matters, and sometimes building the tool that holds it all&nbsp;together.</p>
+        <h2><span class="nw">See it.</span> <span class="nw">Decide it.</span> <span class="nw">Build it.</span></h2>
+        <p class="copy">Your team asks you the same questions every week. Vacation still means checking email. And somehow, the important decisions keep coming back to you. Most of the time the fix isn’t more effort. It’s seeing the pattern, choosing what matters, and sometimes building the tool that holds it all together.</p>
       </div>
         <img class="cafe" src="img/cafe.webp" alt="Laptop, iced coffee and a handwritten notebook on a café table">
       </div>
@@ -336,13 +346,13 @@ footer .fam{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}foote
         <svg class="vthread" viewBox="0 0 40 1000" preserveAspectRatio="none" aria-hidden="true"><path d="M20 0 C 0 120, 40 230, 20 333 S 0 560, 20 666 S 40 900, 20 1000"/></svg>
         <a class="step s1" href="https://snapshot.theclarityforward.com/?mode=full&amp;ref=website&amp;event=website" target="_blank" rel="noopener">
           <span class="num">1</span><span class="what">See it</span><h3>Clarity Snapshot</h3>
-          <p>A free, three-minute look at where friction is hiding and what still depends on&nbsp;you.</p><span class="go">Take the Snapshot →</span></a>
+          <p>A free, three-minute look at where friction is hiding and what still depends on you.</p><span class="go">Take the Snapshot →</span></a>
         <a class="step s2" href="https://theclarityforward.com/" target="_blank" rel="noopener">
           <span class="num">2</span><span class="what">Decide it</span><h3>Clarity Forward</h3>
-          <p>Decision Sessions, Health Checks and fractional COO support that sort what we find into Keep, Fix, Focus, Delegate and&nbsp;Stop.</p><span class="go">Explore Clarity Forward →</span></a>
+          <p>Decision Sessions, Health Checks and fractional COO support that sort what we find into Keep, Fix, Focus, Delegate and Stop.</p><span class="go">Explore Clarity Forward →</span></a>
         <a class="step s3" id="build" href="#connect">
           <span class="num">3</span><span class="what">Build it</span><h3>Custom tools</h3>
-          <p>When the fix is a tool, I build it. Like Clarity Kiosk, which guides people to the right programs, people and&nbsp;resources.</p><span class="go">Ask about a custom build →</span></a>
+          <p>When the fix is a tool, I build it. Like Clarity Kiosk, which guides people to the right programs, people and resources.</p><span class="go">Ask about a custom build →</span></a>
       </div>
       <div class="audit-call" id="step-away-audit">
         <img src="img/step-away-audit.webp" alt="The Step-Away Audit on a laptop and phone" width="1200" height="627" loading="lazy">
@@ -375,14 +385,14 @@ footer .fam{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}foote
     <div class="panel tech">
       <div class="text">
         <div class="eyebrow">Speaking &amp; workshops</div>
-        <h2>Bring it into the&nbsp;room</h2>
-        <p class="lead">I speak with business groups, nonprofit teams and women’s networks about the things that quietly hold us&nbsp;back.</p>
+        <h2>Bring it into the room</h2>
+        <p class="lead">I speak with business groups, nonprofit teams and women’s networks about the things that quietly hold us back.</p>
         <div class="buy"><a class="btn solid" href="#connect">Invite me to speak</a></div>
       </div>
       <ul class="topics">
-        <li><b>Your business has shoulders too</b><span>Owner dependence, and how to build a business that can breathe without&nbsp;you.</span></li>
-        <li><b>Your body has opinions</b><span>A friendly introduction to fascia, bracing, and listening&nbsp;in.</span></li>
-        <li><b>Do what scares you</b><span>Starting before you feel qualified, and what your nervous system has to do with&nbsp;it.</span></li>
+        <li><b>Your business has <span class="nw">shoulders too</span></b><span>Owner dependence, and how to build a business that can breathe without you.</span></li>
+        <li><b>Meet your fascia</b><span>A friendly introduction to fascia, bracing, and listening in.</span></li>
+        <li><b>Do what scares you</b><span>Starting before you feel qualified, and what your nervous system has to do with it.</span></li>
       </ul>
     </div>
   </div>
@@ -395,13 +405,13 @@ footer .fam{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}foote
         <h2>Hi, I’m Kate.</h2>
         <p class="copy">Complex challenges often show up first as friction. I’m interested in understanding what’s creating it, and what would help things work better.</p>
         <p class="copy">I bring a systems perspective shaped by technology leadership, brand and experience development, authorship, and digital product creation.</p>
-        <p class="way">See the pattern. Clarify what matters. Build the next&nbsp;step.</p>
+        <p class="way">See the pattern. Clarify what matters. Build the next step.</p>
         <p class="copy" id="writing">I also write <a href="https://katekness.substack.com/subscribe?utm_source=katekness" target="_blank" rel="noopener"><em>Now That You Mention It</em></a>, a free weekly publication about work, life and the things we stop noticing.</p>
       </section>
 
       <section class="contact" id="connect">
         <div class="eyebrow">Connect</div>
-        <h2>Have a new idea, a messy challenge, or a project we could tackle&nbsp;together?</h2>
+        <h2>Have a new idea, a messy challenge, or a project we could tackle together?</h2>
         <p class="copy">I’d love to hear about it.</p>
         <iframe class="tally" src="https://tally.so/embed/1WWzLO?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;source=website" title="Contact form" loading="lazy"></iframe>
         <p class="direct">Or write to me at <a href="mailto:hello@katekness.com"><b>hello@katekness.com</b></a></p>
